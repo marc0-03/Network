@@ -18,6 +18,7 @@ public class serverSocketer implements Runnable{
 
     @Override
     public void run() {
+        /*
         while (true) {
             Socket socket1 = null;
             Sockets.add(new Socket());
@@ -28,5 +29,6 @@ public class serverSocketer implements Runnable{
             }
 
         }
+         */
     }
 }
