@@ -15,8 +15,8 @@ public class Client {
     public static void main(String[] args) {
         //String ip = (String) JOptionPane.showInputDialog(null,"IP?\nCould be localhost","Connect to..",JOptionPane.QUESTION_MESSAGE);
         String ip = "localhost";
-        int port = 4423;
-        //int port = Integer.parseInt(JOptionPane.showInputDialog(null,"Port?\nFor example 4823","Connect to..",JOptionPane.QUESTION_MESSAGE));
+        int port = 5884;
+        //int port =T Integer.parseInt(JOptionPane.showInputDialog(null,"Port?\nFor example 4823","Connect to..",JOptionPane.QUESTION_MESSAGE));
         String name = (String) JOptionPane.showInputDialog(null,"Name?","Connect to..",JOptionPane.QUESTION_MESSAGE);
         String id = ""+Math.random();
 

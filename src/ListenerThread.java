@@ -21,13 +21,11 @@ public class ListenerThread implements Runnable{
     public void run() {
         String msg = null;
         while (true) {
-            System.out.println("START SEARCH");
             try {
                 msg = in.readLine();
             } catch (IOException e) {
                 //e.printStackTrace();
             }
-            System.out.println("Found");
             if (msg.contains(": [")) {
                 String checkid = msg.substring(msg.indexOf("[")+1);
                 checkid = checkid.substring(0, checkid.indexOf("]"));

@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class Server {
     public static void main(String[] args){
-        int port = 4423;
+        int port = 5884;
         boolean run = true;
         ServerSocket serverSocket;
         Socket socket1;
@@ -24,30 +24,38 @@ public class Server {
             serverSocket = new ServerSocket(port);
             while (true) {
                 System.out.println("Waiting for connections!");
-                //serverSocketer serv = new serverSocketer(serverSocket);
+                serverSocketer serv = new serverSocketer(serverSocket);
+
+                Thread listener = new Thread(serv);
+                listener.start();
+                /*
                 socket1 = serverSocket.accept();
                 socket2 = serverSocket.accept();
                 // Go
                 PrintWriter out1 = new PrintWriter(socket1.getOutputStream(), true);
                 PrintWriter out2 = new PrintWriter(socket2.getOutputStream(), true);
-                //BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
                 ListenerThreadServer in1 = new ListenerThreadServer(new BufferedReader(new InputStreamReader(socket1.getInputStream())), out2);
                 ListenerThreadServer in2 = new ListenerThreadServer(new BufferedReader(new InputStreamReader(socket2.getInputStream())), out1);
+
                 Thread listener1 = new Thread(in1);
                 Thread listener2 = new Thread(in2);
+
                 listener1.start();
                 listener2.start();
+                 */
+
                 System.out.println("Client connected!");
-                Scanner tgb = new Scanner(System.in);
                 //Protocol
                 while (run) {
 
                 }
+                /*
                 out1.close();
                 out2.close();
                 socket1.close();
                 socket2.close();
+                 */
             }
         } catch (IOException e) {
             e.printStackTrace();
